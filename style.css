@@ -428,3 +428,47 @@ footer {
   width: 280px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
+
+.slider {
+  position: relative;
+  width: 150px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.view-link {
+  color: #00ffff; /* warna terang */
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.view-link:hover {
+  color: #ffffff;
+}
+

@@ -16,3 +16,25 @@ window.addEventListener('scroll', () => {
         section.classList.add('reveal');
     }
 });
+
+document.querySelectorAll(".project-card").forEach(card => {
+  let slides = card.querySelectorAll(".slide");
+  let index = 0;
+
+  const nextBtn = card.querySelector(".next");
+  const prevBtn = card.querySelector(".prev");
+
+  if (!nextBtn || !prevBtn) return;
+
+  nextBtn.addEventListener("click", () => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  });
+
+  prevBtn.addEventListener("click", () => {
+    slides[index].classList.remove("active");
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add("active");
+  });
+});
